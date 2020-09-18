@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Not Found";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Извините, страна не найдена.</h1>
+        <hr>
+        <p>
+            К сожалению, указанная страна не найдена. Вы можете попробоавть 
+            <a asp-controller="Home" asp-action="AddCountry">добавить информацию</a>
+            о стране в базу данных.
+        </p>
+        <p>
+            <a class="btn btn-dark" asp-controller="Home" asp-action="SearchPanel">Искать еще &raquo;</a>
+        </p>
+    </div>
+</div>

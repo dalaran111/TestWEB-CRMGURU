@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Not Found via API";
+}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Извините, страна не найдена.</h1>
+        <hr>
+        <p>
+            К сожалению, указанная страна не найдена. Вы можете попробоавть
+            <a asp-controller="Home" asp-action="AddCountryByAPI">добавить информацию о стране в базу данных с помощью API ссылки.</a>
+        </p>
+        <p>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="SearchPanelAPI">Искать еще &raquo;</a>
+        </p>
+    </div>
+</div>

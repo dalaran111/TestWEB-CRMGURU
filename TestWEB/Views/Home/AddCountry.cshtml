@@ -1,0 +1,74 @@
+﻿@model TestWEB.WebUI.Models.CountryViewModel
+@{
+    ViewData["Title"] = "Add country";
+}
+<div>
+    <h4>Добавить страну</h4>
+    <hr />
+    <form asp-action="AddCountry" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class=" form-row">
+            <div class="col-md-4">
+
+                <div class="form-group">
+                    <label asp-for="Country.Name" class="control-label"></label>
+                    <input asp-for="Country.Name" class="form-control" placeholder="Название страны" />
+                    <span asp-validation-for="Country.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country.CountryCode" class="control-label"></label>
+                <input asp-for="Country.CountryCode" class="form-control" placeholder="Код страны (ICAO)" />
+                <span asp-validation-for="Country.CountryCode" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="CapitalName" class="control-label"></label>
+                    <input asp-for="CapitalName" class="form-control" placeholder="Столица" />
+                    <span asp-validation-for="CapitalName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country.Area" class="control-label"></label>
+                <input asp-for="Country.Area" class="form-control" placeholder="Площадь" />
+                <span asp-validation-for="Country.Area" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label asp-for="Country.Population" class="control-label"></label>
+                        <input asp-for="Country.Population" class="form-control" placeholder="Население" />
+                        <span asp-validation-for="Country.Population" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegionName" class="control-label"></label>
+                <input asp-for="RegionName" class="form-control" placeholder="Регион" />
+                <span asp-validation-for="RegionName" class="text-danger"></span>
+            </div>
+
+            <input type="hidden" asp-for="Country.CapitalId" class="form-control" value="1" />
+            <input type="hidden" asp-for="Country.RegionId" class="form-control" value="1" />
+
+
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Сохранить" class="btn btn-primary" />
+        </div>
+
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-danger">Вернуться к начальной странице &raquo;</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

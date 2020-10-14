@@ -35,3 +35,25 @@ iii. Проверяем наличие Страны в таблице стран
 6. Должен работать с БД MS SQL.
 7. Удобно редактируемый конфиг с подключением к БД внутри приложения.
 8. Читабельный код.
+
+Скриншоты реализации:
+
+Стартовая страница
+
+![Screenshot](https://github.com/dalaran111/TestWEB-CRMGURU/blob/master/Screenshots/HomePage.png)
+
+Поиск страны по названию:
+
+![Screenshot](https://github.com/dalaran111/TestWEB-CRMGURU/blob/master/Screenshots/Search.png)
+
+Поиск страны с помощью API:
+
+![Screenshot](https://github.com/dalaran111/TestWEB-CRMGURU/blob/master/Screenshots/Search%20via%20API.png)
+
+Вывод всех стран из базы данных:
+
+![Screenshot](https://github.com/dalaran111/TestWEB-CRMGURU/blob/master/Screenshots/AllCountriesFromDB.png)
+
+Уведомление о том, что страна не найдена:
+
+![Screenshot](https://github.com/dalaran111/TestWEB-CRMGURU/blob/master/Screenshots/Country%20nof%20found.png)
